@@ -3,28 +3,39 @@
 namespace App\ClassesAndObjects;
 
 /**
- * Interface Shape
+ * Class Shape
  * @package App\ClassesAndObjects
  */
-interface Shape
+abstract class Shape
 {
-    /**
-     * @return int
-     */
-    public static function pointCount();
-
-    /**
-     * @return double
-     */
-    public function area();
-
-    /**
-     * @return double
-     */
-    public function circumference();
+    use ClassPrintable;
 
     /**
      * @return int
      */
-    public static function edgeCount();
+    public abstract static function pointCount();
+
+    /**
+     * @return double
+     */
+    public abstract function area();
+
+    /**
+     * @return double
+     */
+    public abstract function circumference();
+
+    /**
+     * @return int
+     */
+    public abstract static function edgeCount();
+
+    /**
+     * @return bool
+     */
+    public static function isThisRealLife()
+    {
+        dump(self::class);
+        dump(static::class);
+    }
 }

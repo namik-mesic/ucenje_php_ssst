@@ -6,7 +6,7 @@ namespace App\ClassesAndObjects;
  * Class Circle
  * @package App\ClassesAndObjects
  */
-class Circle implements Shape
+class Circle extends Shape
 {
     /**
      * @var Point

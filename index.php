@@ -3,6 +3,7 @@
 include 'vendor/autoload.php';
 
 use App\ClassesAndObjects\Circle;
+use App\ClassesAndObjects\ClassPrintable;
 use App\ClassesAndObjects\EqualSidedTriangle;
 use App\ClassesAndObjects\Shape;
 use App\ClassesAndObjects\Triangle;
@@ -31,8 +32,13 @@ $shapes = [
 function printShapeArea(Shape $shape)
 {
     print $shape->area() . '<br>';
+    $shape->printClassName();
+    print '<br>';
 }
 
 
 foreach ($shapes as $shape)
     printShapeArea($shape);
+
+print Triangle::isThisRealLife();
+print Shape::isThisRealLife();

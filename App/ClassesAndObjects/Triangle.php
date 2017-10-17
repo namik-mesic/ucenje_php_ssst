@@ -6,7 +6,7 @@ namespace App\ClassesAndObjects;
  * Class Triangle
  * @package App\ClassesAndObjects
  */
-class Triangle implements Shape
+class Triangle extends Shape
 {
     /**
      * @var int
