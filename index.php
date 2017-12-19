@@ -42,5 +42,3 @@ foreach ($shapes as $shape)
 
 print Triangle::isThisRealLife();
 print Shape::isThisRealLife();
-
-
